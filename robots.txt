@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mukul-rgb-beep.github.io/pingpulse/sitemap.xml

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support &amp; FAQ - PingPulse | macOS Network Monitor Help</title>
+<meta name="description" content="Get help with PingPulse. Troubleshooting guides, FAQs about network diagnostics, macOS compatibility, and how to contact support. Developed by Mukul Mehra.">
+<meta name="author" content="Mukul Mehra">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mukul-rgb-beep.github.io/pingpulse/support.html">
+<meta property="og:title" content="Support & FAQ - PingPulse">
+<meta property="og:description" content="Get help with PingPulse. Troubleshooting, FAQs, and contact support.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mukul-rgb-beep.github.io/pingpulse/support.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --bg: #06060b; --t1: #f0f0f5; --t2: rgba(240,240,245,0.6); --t3: rgba(240,240,245,0.35); --accent: #0A84FF; --green: #34D399; --glass-bg: rgba(255,255,255,0.06); --glass-border: rgba(255,255,255,0.1); --r: 24px; --rs: 16px; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--t1); -webkit-font-smoothing: antialiased; }
+.bg-canvas { position: fixed; inset: 0; z-index: -1; }
+.bg-canvas::before { content: ''; position: absolute; width: 140%; height: 140%; top: -20%; left: -20%; background: radial-gradient(ellipse at 30% 30%, rgba(52,211,153,0.1) 0%, transparent 50%), radial-gradient(ellipse at 70% 70%, rgba(10,132,255,0.08) 0%, transparent 45%); }
+.container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; background: rgba(6,6,11,0.8); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--t1); }
+.nav-logo svg { width: 32px; height: 32px; }
+.nav-logo span { font-size: 18px; font-weight: 800; letter-spacing: -0.03em; }
+.nav-back { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+.nav-back:hover { text-decoration: underline; }
+.content { padding: 120px 0 80px; }
+.glass-page { background: var(--glass-bg); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid var(--glass-border); border-radius: var(--r); padding: 48px 40px; margin-bottom: 24px; }
+.page-title { font-size: 36px; font-weight: 900; letter-spacing: -0.04em; margin-bottom: 8px; }
+.page-subtitle { font-size: 16px; color: var(--t2); margin-bottom: 40px; line-height: 1.6; }
+h2 { font-size: 20px; font-weight: 700; margin-top: 36px; margin-bottom: 12px; }
+h2:first-of-type { margin-top: 0; }
+p, li { font-size: 15px; line-height: 1.7; color: var(--t2); margin-bottom: 12px; }
+ul { padding-left: 20px; margin-bottom: 12px; }
+li { margin-bottom: 6px; }
+strong { color: var(--t1); font-weight: 600; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.contact-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--rs); padding: 24px; margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+.contact-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ci-email { background: rgba(10,132,255,0.12); border: 1px solid rgba(10,132,255,0.18); }
+.ci-response { background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.18); }
+.contact-info { flex: 1; }
+.contact-label { font-size: 14px; font-weight: 600; color: var(--t1); margin-bottom: 2px; }
+.contact-value { font-size: 14px; color: var(--t2); margin-bottom: 0; }
+.faq-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--rs); padding: 20px 24px; margin-bottom: 12px; }
+.faq-q { font-size: 15px; font-weight: 600; color: var(--t1); margin-bottom: 8px; }
+.faq-a { font-size: 14px; color: var(--t2); line-height: 1.6; margin-bottom: 0; }
+footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.footer-copy { font-size: 13px; color: var(--t3); }
+.footer-links { display: flex; gap: 24px; list-style: none; }
+.footer-links a { font-size: 13px; color: var(--t3); text-decoration: none; }
+.footer-links a:hover { color: var(--t2); }
+@media (max-width: 600px) { .glass-page { padding: 32px 24px; } .page-title { font-size: 28px; } .contact-card { flex-direction: column; text-align: center; } }
+</style>
+</head>
+<body>
+<div class="bg-canvas"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="./" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#lg)"/><path d="M6 16h4l3-8 4 16 3-12 3 6h3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#0A84FF"/><stop offset="1" stop-color="#A78BFA"/></linearGradient></defs></svg>
+      <span>PingPulse</span>
+    </a>
+    <a href="./" class="nav-back">&larr; Back to Home</a>
+  </div>
+</nav>
+<div class="content">
+  <div class="container">
+    <div class="glass-page">
+      <h1 class="page-title">Support</h1>
+      <p class="page-subtitle">We're here to help. If you're experiencing issues with PingPulse or have questions, reach out and we'll get back to you as soon as possible.</p>
+      <div class="contact-card">
+        <div class="contact-icon ci-email">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A84FF" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-info">
+          <div class="contact-label">Email Support</div>
+          <div class="contact-value"><a class="email-link" data-name="mukulmehra" data-domain="zohomail.com" href="#">Loading...</a></div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon ci-response">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="contact-info">
+          <div class="contact-label">Response Time</div>
+          <div class="contact-value">We typically respond within 24 hours</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-page">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><div class="faq-q">How does PingPulse diagnose network issues?</div><div class="faq-a">PingPulse sends lightweight TCP probes (not ICMP ping) to public DNS servers like Cloudflare (1.1.1.1) and Google (8.8.8.8) on port 443. It also measures DNS resolution speed. These measurements are analyzed on-device to classify the root cause of any connectivity problems.</div></div>
+      <div class="faq-item"><div class="faq-q">Does PingPulse use a lot of bandwidth or battery?</div><div class="faq-a">No. Each probe is a minimal TCP connection (just a handshake, no data payload). PingPulse also features adaptive refresh that automatically reduces probe frequency when your connection is stable, minimizing resource usage.</div></div>
+      <div class="faq-item"><div class="faq-q">Does PingPulse collect any personal data?</div><div class="faq-a">No. All diagnostics run entirely on your device. No data is collected, transmitted, or stored on external servers. See our <a href="./privacy.html">Privacy Policy</a> for full details.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I get a refund?</div><div class="faq-a">Refund requests are handled by Apple. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> to submit a refund request for your purchase.</div></div>
+      <div class="faq-item"><div class="faq-q">Why does PingPulse need network access?</div><div class="faq-a">Network access is required to perform the diagnostic probes that measure your connection quality. PingPulse connects only to Cloudflare (1.1.1.1) and Google (8.8.8.8) on port 443, and performs standard DNS lookups. No personal information is transmitted.</div></div>
+      <div class="faq-item"><div class="faq-q">Can I export my diagnostics data?</div><div class="faq-a">Yes. Go to the Settings tab and click "Export Log" to save a CSV file of your diagnostic history. This is useful for sharing with your ISP to demonstrate outage patterns.</div></div>
+      <div class="faq-item"><div class="faq-q">What macOS versions are supported?</div><div class="faq-a">PingPulse supports macOS 13 (Ventura) and later. For the best experience with the new Liquid Glass design, macOS 26 (Tahoe) or later is recommended.</div></div>
+      <div class="faq-item"><div class="faq-q">The app shows "Unknown" — what does that mean?</div><div class="faq-a">When PingPulse first launches, it needs a few seconds to gather enough data to make a diagnosis. Keep the app running and it will classify your connection status within one or two probe cycles.</div></div>
+    </div>
+
+    <div class="glass-page">
+      <h2>Troubleshooting</h2>
+      <p><strong>PingPulse shows "Offline" but I have internet:</strong> This can happen if your firewall or VPN is blocking TCP connections on port 443 to 1.1.1.1 or 8.8.8.8. Try temporarily disabling your firewall or VPN to verify. You can also switch the probe target in Settings.</p>
+      <p><strong>Notifications aren't working:</strong> Make sure PingPulse has notification permissions enabled. Go to System Settings &rarr; Notifications &rarr; PingPulse and ensure "Allow Notifications" is turned on. Also check that quiet hours aren't active in the app settings.</p>
+      <p><strong>The menu bar icon isn't appearing:</strong> If you have many menu bar items, macOS may hide some. Try closing other menu bar apps or using a tool like Bartender to manage menu bar space.</p>
+      <p><strong>High CPU usage:</strong> This shouldn't happen under normal conditions. If it does, try increasing the refresh interval in Settings (e.g., to 15–30 seconds) and enable "Reduce traffic automatically" to let the app throttle probes when your connection is stable.</p>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 PingPulse by Mukul Mehra. All rights reserved.</div>
+    <ul class="footer-links">
+      <li><a href="./support.html">Support</a></li>
+      <li><a href="./terms.html">Terms of Use</a></li>
+      <li><a href="./privacy.html">Privacy Policy</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.email-link').forEach(function(el){var n=el.getAttribute('data-name'),d=el.getAttribute('data-domain'),a=n+'@'+d;el.href='mai'+'lto:'+a;el.textContent=a});
+</script>
+</body>
+</html>
